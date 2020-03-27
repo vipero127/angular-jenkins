@@ -30,7 +30,6 @@
 pipeline {
     agent {
         docker {
-            deleteDir()
             image 'node:latest' 
             args '-p 3000:3000' 
             args '-u 0:0'
@@ -39,6 +38,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+                  echo "aaaa"
 //                sh 'npm install' 
 //                sh 'npm run build' 
             }
