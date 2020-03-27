@@ -38,6 +38,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+                deleteDir()
                 sh 'node --version' 
 //                sh 'npm install' 
 //                sh 'npm run build' 
