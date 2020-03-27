@@ -41,17 +41,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+                echo 'Building'
                 echo "0001"
                 echo "Node Version is ${NODE_VERSION}"
                 echo "0002"
                 sh 'node --version' 
                 echo "0003"
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building'
             }
         }
         stage('Test') {
