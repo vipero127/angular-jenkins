@@ -48,6 +48,7 @@ pipeline {
                 sh 'node --version' 
                 echo "0003"
                 sh 'docker-compose build'
+                echo "0004"
             }
         }
         stage('Test') {
