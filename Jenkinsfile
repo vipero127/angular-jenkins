@@ -42,14 +42,28 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "0001"
-//                deleteDir()
                 echo "Node Version is ${NODE_VERSION}"
                 echo "0002"
                 sh 'node --version' 
                 echo "0003"
-//                sh 'npm install' 
-//                sh 'npm run build' 
             }
         }
+
+        stage('Build') {
+            steps {
+                echo 'Building'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+
     }
 }
