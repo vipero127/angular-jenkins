@@ -27,12 +27,10 @@
         }
     }
 }*/
-
-
 pipeline {
     agent {
         docker {
-            image 'node:13.11' 
+            image 'node:latest' 
         }
     }
     stages {
