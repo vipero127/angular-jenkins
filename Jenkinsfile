@@ -11,8 +11,9 @@ node {
     } 
     stage('Build') {
       echo "Build"
-      sh "npm install"
-      sh "npm run build"
+//      sh "npm install"
+//      sh "npm run build"
+      sh "docker login -u \"ganatan\" -p \"Trustno1982Beastmaster\" docker.io"
       sh "docker build -t helloimage:1.0.0 ."
     } 
   }
