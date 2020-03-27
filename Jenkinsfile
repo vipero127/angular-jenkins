@@ -8,7 +8,7 @@ node {
       sh 'npm --version'
     } 
     stage('Build') {
-      sh 'npm install'
+      echo "npm install"
     } 
   }
   catch (err) {
