@@ -35,6 +35,10 @@ pipeline {
             args '-u 0:0'
         }
     }
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
     stages {
         stage('Build') { 
             steps {
