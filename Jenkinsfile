@@ -37,10 +37,12 @@ pipeline {
     }
     environment {
         NODE_VERSION = '13.11.0'
+        DOCKER_VERSION = '13.11.0'
     }
     stages {
         stage('Build') { 
             steps {
+                echo "0000"
                 echo 'Building'
                 echo "0001"
                 echo "Node Version is ${NODE_VERSION}"
