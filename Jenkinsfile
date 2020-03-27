@@ -1,4 +1,4 @@
-/* node {
+ node {
   try {
     stage('Checkout') {
       echo "checkout scm"
@@ -26,8 +26,8 @@
             }
         }
     }
-}*/
-pipeline {
+} */
+/* pipeline {
     agent {
         docker {
             image 'node:latest' 
@@ -45,13 +45,13 @@ pipeline {
                 echo "0000"
                 echo 'Building'
                 sh 'docker version' 
-/*                echo "0001"
+                echo "0001"
                 echo "Node Version is ${NODE_VERSION}"
                 echo "0002"
                 sh 'node --version' 
                 echo "0003"
                 sh 'docker build -t nom-image:1.0.0 .'
-                echo "0004"*/
+                echo "0004"
             }
         }
         stage('Test') {
@@ -66,4 +66,4 @@ pipeline {
         }
 
     }
-}
+} */
