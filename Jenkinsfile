@@ -10,7 +10,7 @@ node {
       sh 'docker version'
     } 
     stage('Build') {
-      echo "Build"
+      echo "Stage Build"
       sh "npm install"
       sh "npm run build"
       sh "docker login -u \"ganatan\" -p \"Trustno1982Beastmaster\" docker.io"
