@@ -1,4 +1,4 @@
-node {
+/* node {
   try {
     stage('Checkout') {
       echo "checkout scm"
@@ -14,4 +14,18 @@ node {
   catch (err) {
     throw err
   }
+} */
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
+    }
 }
