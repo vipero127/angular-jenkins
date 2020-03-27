@@ -15,7 +15,7 @@
     throw err
   }
 } */
-pipeline {
+/* pipeline {
     agent any
     stages {
         stage('Build') {
@@ -23,6 +23,23 @@ pipeline {
                 sh 'echo "Hello World"'
                 sh 'npm --version'
                 sh 'npm install'
+            }
+        }
+    }
+}*/
+
+
+pipeline {
+    agent {
+        docker {
+            image 'node:13.11' 
+            args '-p 3000:3000' 
+        }
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
             }
         }
     }
