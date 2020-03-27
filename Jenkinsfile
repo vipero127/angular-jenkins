@@ -49,7 +49,7 @@ pipeline {
                 echo "0002"
                 sh 'node --version' 
                 echo "0003"
-                sh 'docker-compose build'
+                sh 'docker build -t nom-image:1.0.0 .'
                 echo "0004"
             }
         }
