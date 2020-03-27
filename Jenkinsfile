@@ -7,6 +7,9 @@ node {
       sh 'git --version'
       sh 'npm --version'
     } 
+    stage('Build') {
+      sh 'npm install'
+    } 
   }
   catch (err) {
     throw err
