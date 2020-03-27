@@ -36,14 +36,14 @@ pipeline {
         }
     }
     environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
+        NODE_VERSION = '13.11.0'
     }
     stages {
         stage('Build') { 
             steps {
                 echo "0001"
-                deleteDir()
+//                deleteDir()
+                echo "Node Version is ${NODE_VERSION}"
                 echo "0002"
                 sh 'node --version' 
                 echo "0003"
