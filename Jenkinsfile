@@ -38,8 +38,11 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+                echo "0001"
                 deleteDir()
+                echo "0002"
                 sh 'node --version' 
+                echo "0003"
 //                sh 'npm install' 
 //                sh 'npm run build' 
             }
