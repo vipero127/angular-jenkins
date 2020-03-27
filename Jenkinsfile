@@ -47,6 +47,7 @@ pipeline {
                 echo "0002"
                 sh 'node --version' 
                 echo "0003"
+                sh ''
             }
         }
         stage('Test') {
