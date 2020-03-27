@@ -7,9 +7,12 @@ node {
     stage('Environment') {
       sh 'git --version'
       sh 'npm --version'
+      sh 'docker version'
     } 
     stage('Build') {
-      echo "npm install"
+      echo "Build"
+/*      sh "npm install"
+      sh "npm run build"*/
     } 
   }
   catch (err) {
